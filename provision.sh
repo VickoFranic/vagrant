@@ -48,12 +48,8 @@ tools_go() {
 
 phalcon_go() {
 	# Install Phalcon
-	cd /opt/
-	git clone https://github.com/phalcon/cphalcon.git
-	cd cphalcon/build
-	./install
-	echo "extension=phalcon.so" > ${php_config_file}
-	service apache2 reload
+	curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
+	apt-get -y install php5-phalcon
 }
 
 apache_go() {
