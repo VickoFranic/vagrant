@@ -1,3 +1,3 @@
 # Vagrant Phalcon
 
-Phalcon 2.1.x based Vagrant configuration (for my personal use)
+Phalcon 2.0.x based Vagrant configuration (for my personal use)
