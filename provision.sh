@@ -50,6 +50,13 @@ phalcon_go() {
 	# Install Phalcon
 	curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
 	apt-get -y install php5-phalcon
+	cd /opt/
+	git clone https://github.com/phalcon/phalcon-devtools.git
+	cd phalcon-devtools
+	ln -s /opt/phalcon-devtools/phalcon.php /user/bin/phalcon
+	chmod ugo+x /usr/bin/phalcon
+
+	service apache2 restart
 }
 
 apache_go() {
