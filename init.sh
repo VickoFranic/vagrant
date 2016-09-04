@@ -195,7 +195,7 @@ a2enmod rewrite
 #
 cd ~
 phpdismod -v 5.6 xdebug
-echo '{"require": {"phalcon/devtools": "dev-master"}}' > composer.json
+echo '{"require": {"phalcon/devtools": "^2.0"}}' > composer.json
 composer install --ignore-platform-reqs
 rm composer.json
 mkdir /opt/phalcon-tools
