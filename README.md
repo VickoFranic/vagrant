@@ -1,3 +1,11 @@
+# Update
+============
+
+My custom vagrant setup, based on:
+
+[https://github.com/mattandersen/vagrant-lamp](https://github.com/mattandersen/vagrant-lamp)
+
+
 Vagrant LAMP
 ============
 
