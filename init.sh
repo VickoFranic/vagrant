@@ -62,6 +62,7 @@ apt-get -q -y install mysql-server-5.6 \
   curl \
   htop \
   git \
+  bash-completion \
   dos2unix \
   unzip \
   vim \
