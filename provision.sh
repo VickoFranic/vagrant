@@ -43,13 +43,22 @@ network_go() {
 
 tools_go() {
 	# Install basic tools
-	apt-get -y install build-essential binutils-doc git subversion
+	apt-get -y install build-essential binutils-doc git bash-completion subversion
 }
 
 phalcon_go() {
-	# Install Phalcon
-	curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
-	apt-get -y install php5-phalcon
+	# Install Phalcon (2.1.x)
+	echo "Installing Phalcon 2.1.x ..."
+	apt-get -y install php5-dev libpcre3-dev gcc make
+	git clone --depth=1 git://github.com/phalcon/cphalcon.git --branch 2.1.x
+	cd cphalcon/build
+	./install
+
+	# Latest Phalcon version
+	# curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash
+	# apt-get -y install php5-phalcon
+
+	# Install PhalconDevTools
 	cd /opt/
 	git clone https://github.com/phalcon/phalcon-devtools.git
 	cd phalcon-devtools
