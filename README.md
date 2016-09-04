@@ -1,4 +1,4 @@
-# Update
+Update
 ============
 
 My custom vagrant setup, based on:
