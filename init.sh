@@ -148,7 +148,7 @@ sudo chown -R vagrant:vagrant ${ZEPHIRDIR}
 #
 # Install Phalcon Framework
 #
-git clone --depth=1 git://github.com/phalcon/cphalcon.git --branch 2.1.x
+git clone --depth=1 git://github.com/phalcon/cphalcon.git --branch 2.0.x
 (cd cphalcon && zephir fullclean && zephir builddev)
 touch /etc/php/5.6/mods-available/phalcon.ini
 echo -e "extension=phalcon.so" | tee /etc/php/5.6/mods-available/phalcon.ini &>/dev/null
