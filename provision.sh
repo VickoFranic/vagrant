@@ -17,6 +17,7 @@ main() {
 	apache_go
 	mysql_go
 	php_go
+	phalcon_go
 	autoremove_go
 }
 
@@ -43,6 +44,16 @@ network_go() {
 tools_go() {
 	# Install basic tools
 	apt-get -y install build-essential binutils-doc git subversion
+}
+
+phalcon_go() {
+	# Install Phalcon
+	cd /opt/
+	git clone https://github.com/phalcon/cphalcon.git
+	cd cphalcon/build
+	./install
+	echo "extension=phalcon.so" > ${php_config_file}
+	service apache2 reload
 }
 
 apache_go() {
