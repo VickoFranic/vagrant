@@ -229,9 +229,8 @@ a2dissite 000-default
 #
 # Node & NPM
 #
-apt-get update
-apt-get install nodejs
-apt-get install npm
+sudo apt-get install nodejs
+sudo apt-get install npm
 
 #
 #  Cleanup
