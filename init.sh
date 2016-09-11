@@ -74,7 +74,9 @@ apt-get -q -y install mysql-server-5.6 \
   lsb-core \
   autoconf \
   redis-server \
-  redis-tools
+  redis-tools \
+  nodejs \
+  npm
 
 #
 # Base PHP
@@ -225,12 +227,6 @@ sed -i 's/export APACHE_RUN_GROUP=www-data/export APACHE_RUN_GROUP=vagrant/' /et
 #
 a2ensite vagrant
 a2dissite 000-default
-
-#
-# Node & NPM
-#
-sudo apt-get install nodejs
-sudo apt-get install npm
 
 #
 #  Cleanup
