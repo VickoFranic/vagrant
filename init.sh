@@ -177,8 +177,6 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 cd ~
 echo '<VirtualHost *:80>
         DocumentRoot /vagrant/www
-        ErrorLog  /vagrant/www/projects-error.log
-        CustomLog /vagrant/www/projects-access.log combined
 </VirtualHost>
 
 <Directory "/vagrant/www">
@@ -229,6 +227,13 @@ a2ensite vagrant
 a2dissite 000-default
 
 #
+# Node & NPM
+#
+apt-get update
+apt-get install nodejs
+apt-get install npm
+
+#
 #  Cleanup
 #
 apt-get autoremove -y
@@ -243,5 +248,5 @@ echo -e
 echo -e "Then follow the README.md to copy/paste the VirtualHost!\n"
 
 echo -e "----------------------------------------"
-echo -e "Default Site: http://192.168.50.4"
+echo -e "Default Site: http://192.168.50.5"
 echo -e "----------------------------------------"
